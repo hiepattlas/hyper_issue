@@ -5815,6 +5815,11 @@ react-native-gradle-plugin@^0.71.19:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.19.tgz#3379e28341fcd189bc1f4691cefc84c1a4d7d232"
   integrity sha512-1dVk9NwhoyKHCSxcrM6vY6cxmojeATsBobDicX0ZKr7DgUF2cBQRTKsimQFvzH8XhOVXyH8p4HyDSZNIFI8OlQ==
 
+react-native-hyperkyc-sdk@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-hyperkyc-sdk/-/react-native-hyperkyc-sdk-0.9.1.tgz#6601247aa2260f694a7c8f13cbffd7482e1d473e"
+  integrity sha512-TbEDhxFAN0++7iaPm8FhZxO4+KkV6w7K3YuTnQSQm6rFR017wct3XqeQaGkuG3P1g86OoZBJ/uVHAwwHUYncMA==
+
 react-native@0.71.10:
   version "0.71.10"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.71.10.tgz#4294d289b4226a3f35bd627bb157fc1f18395d58"

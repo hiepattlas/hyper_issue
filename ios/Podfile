@@ -28,8 +28,8 @@ end
 target 'attlas_x_hyper2' do
   config = use_native_modules!
 
-  # pod 'HyperKYC/DocDetect', '0.9.1', :build_type => :static_framework
-  pod 'HyperKYC/DocDetect', :build_type => :static_framework
+  # pod 'HyperKYC', '0.9.1', :build_type => :static_framework
+  pod 'HyperKYC', :build_type => :static_framework
 
 
   # Flags change depending on the env values.

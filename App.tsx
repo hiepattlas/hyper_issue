@@ -12,7 +12,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
+  Text, TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -24,6 +24,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {NativeModules} from 'react-native';
+const { Hyperkyc } = NativeModules;
+
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,6 +65,17 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  function openHyper() {
+    var conf = {};
+    conf["accessToken"] = '';
+    conf['transactionId'] = 'zzzzzzzzzz' + Date.now();
+    conf['workflowId'] = 'workflow_Attlas_Passport_KYC';
+    conf['defaultLangCode'] = 'vi';
+    Hyperkyc.launch(conf, function (result) {
+      console.log(11111111111, result)
+    })
+  }
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -76,6 +90,13 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <TouchableOpacity onPress={openHyper}>
+            <View style={{width: 100, height: 100}}>
+              <Text>
+                Open HyperKyc
+              </Text>
+            </View>
+          </TouchableOpacity>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
